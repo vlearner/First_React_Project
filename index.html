@@ -24,11 +24,25 @@
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
         
         <script type="text/babel">
+
+            class ReactComp extends React.Component{
+                render(){
+                    return(
+                        <div>
+                            <h1>Merry Christmas from JSX</h1>
+                        </div>
+                    )
+                }
+            }
+            
             ReactDOM.render(
-                <h1>Merry Christmas from JSX</h1>,
+                <ReactComp></ReactComp>,
                 document.getElementById('react_jsx_container')
             )
+
         </script>
+
+        
         <script src="like_button.js"></script>
     </body>
 </html>
