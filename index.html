@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>React Project</title>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
         <h1>React</h1>
@@ -11,11 +12,23 @@
             <div class="like_button_container"></div>
         </p>
 
+        <p>
+            <h1>JSX</h1>
+            <div id="react_jsx_container"></div>
+
+        </p>
+
 
 
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
+        
+        <script type="text/babel">
+            ReactDOM.render(
+                <h1>Merry Christmas from JSX</h1>,
+                document.getElementById('react_jsx_container')
+            )
+        </script>
         <script src="like_button.js"></script>
     </body>
 </html>
