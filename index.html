@@ -6,6 +6,7 @@
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
+
         <h1>React</h1>
         <p>
             This is react page.
@@ -29,14 +30,21 @@
                 render(){
                     return(
                         <div>
-                            <h1>Merry Christmas from JSX</h1>
+                            <h1>Merry Christmas from {this.props.name} </h1>
+                            <div>
+                                <h2>Hi From nested div</h2>
+                                <p>React is {this.props.expression}</p>
+                            </div>
                         </div>
                     )
                 }
             }
+
+           
+            const element = <ReactComp name="JSX" expression="fun" /> ;
             
             ReactDOM.render(
-                <ReactComp></ReactComp>,
+                element,
                 document.getElementById('react_jsx_container')
             )
 
